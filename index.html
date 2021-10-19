@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>index.knit</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.19/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="case-study-project---ukranian-coffee-shops" class="section level1">
+<h1>Case Study Project - Ukranian Coffee Shops</h1>
+<p>The dataset which will be used contains information about coffee shops in Ukraine. I will determine the market segments in this market along with the key features so this can be presented to the marketing team. I will focus initially on data wrangling to get the dataset in shape for modeling, then will dive deep into principal component analysis to determine the key market segments.</p>
+<div id="objective" class="section level2">
+<h2>Objective</h2>
+<p>The objective has been set and detailed in the document below:</p>
+<p><a href="https://s3.amazonaws.com/talent-assets.datacamp.com/Certification+Case+Study+-+Coffee+Shops+-+Prework.pdf" class="uri">https://s3.amazonaws.com/talent-assets.datacamp.com/Certification+Case+Study+-+Coffee+Shops+-+Prework.pdf</a></p>
+<pre class="r"><code># Settings used
+
+knitr::opts_chunk$set(
+    message = FALSE,
+    warning = FALSE,
+    fig.align=&#39;center&#39;
+)</code></pre>
+</div>
+<div id="load-the-tidyverse-and-dataset" class="section level2">
+<h2>Load the tidyverse and dataset</h2>
+<pre class="r"><code># Load the tidyverse and janitor libraries
+
+library(tidyverse)
+library(janitor)
+
+# Load the dataset
+
+df &lt;- read_csv(&quot;coffee_shops.csv&quot;)
+
+df_clean &lt;- df %&gt;%
+            clean_names()</code></pre>
+<p>Place_name is irrelevant in the dataset so will be deleted</p>
+</div>
+<div id="understanding-our-data" class="section level2">
+<h2>Understanding our data</h2>
+<pre class="r"><code># The code below will produce an interactive table using the datatable package
+
+df_clean &lt;- df_clean %&gt;%
+            select(-place_name) %&gt;%
+            mutate(region = as.factor(region)) %&gt;%
+            mutate(place_type = as.factor(place_type)) 
+
+# Below code removes irrelevant data point related to an appliance repair service
+
+# Dine in option describes whether there is (or isn&#39;t) a delivery option so will set missing values as FALSE 
+
+# Take-out option describes whether there is (or isn&#39;t) a Take-out option so will set missing values as FALSE 
+
+# Below code categorises price into Low, Medium, and High 
+
+df_clean &lt;- df_clean %&gt;%
+  filter(!place_type == &quot;Appliance repair service&quot;) %&gt;%
+  mutate(dine_in_option = if_else(is.na(dine_in_option),FALSE,TRUE)) %&gt;%
+  mutate(takeout_option = if_else(is.na(takeout_option),FALSE,TRUE)) %&gt;%
+  mutate(delivery_option = if_else(dine_in_option == FALSE &amp; takeout_option == FALSE, TRUE, delivery_option)) %&gt;%
+  mutate(price = if_else(price == &quot;$&quot;, &quot;Low&quot;, price)) %&gt;%
+  mutate(price = if_else(price == &quot;$$&quot;, &quot;Medium&quot;, price)) %&gt;%
+  mutate(price = if_else(price == &quot;$$$&quot;, &quot;High&quot;, price))</code></pre>
+<div id="interactive-map-showing-region-details" class="section level3">
+<h3>Interactive map showing region details</h3>
+<pre class="r"><code># The code below will produce an interactive table using the datatable package. I also use basic JavaScript and CSS to style the table headers.
+
+library(DT)
+
+datatable(df_clean, options = list(
+  initComplete = JS(&quot;
+    function(settings, json) {
+      $(this.api().table().header()).css({
+        &#39;background-color&#39;: &#39;#009879&#39;,
+        &#39;color&#39;: &#39;#fff&#39;
+      });
+    }&quot;)
+))</code></pre>
+<div id="htmlwidget-171cd4bc85221ad544a3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-171cd4bc85221ad544a3">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199"],["Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro"],["Coffee store","Cafe","Coffee shop","Coffee shop","Coffee shop","Espresso bar","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Cafe","Cafe","Cafe","Cafe","Cafe","Coffee shop","Cafe","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Cafe","Espresso bar","Cafe","Cafe","Espresso bar","Coffee shop","Cafe","Coffee store","Coffee shop","Coffee shop","Coffee shop","Chocolate shop","Coffee store","Cafe","Coffee shop","Coffee shop","Coffee shop","Cafe","Cafe","European restaurant","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Espresso bar","Cafe","Coffee shop","Coffee shop","Cafe","Coffee shop","Coffee shop","Coffee shop","Espresso bar","Coffee shop","Cafe","Coffee shop","Espresso bar","Internet shop","Cafe","Coffee shop","Coffee shop","Espresso bar","Coffee store","Store","Coffee stand","Espresso bar","Coffee shop","Cafe","Coffee shop","Cafe","Coffee shop","Cafe","Coffee shop","Espresso bar","Cafe","Coffee shop","Coffee shop","Store","Coffee shop","Coffee shop","Espresso bar","Coffee roasters","Coffee shop","Pastry shop","Coffee shop","Espresso bar","Coffee shop","Coffee shop","Coffee store","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee roasters","Coffee shop","Cafe","Cafe","Cafe","Cafe","Coffee shop","Cafe","Cafe","Coffee shop","Cafe","Cafe","Coffee shop","Coffee store","Cafe","Cafe","Cafe","Cafe","Espresso bar","Cafe","Cafe","Cafe","Cafe","Cafe","Coffee shop","Cafe","Cafe","Coffee store","E-commerce service","Coffee shop","Coffee shop","Coffee store","Espresso bar","Coffee shop","Coffee shop","Coffee shop","Cafe","Cafe","Cafe","Espresso bar","Coffee shop","Espresso bar","Cafe","Espresso bar","Coffee shop","Espresso bar","Coffee shop","Coffee store","Espresso bar","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Cafe","Espresso bar","Coffee shop","Coffee shop","Espresso bar","Coffee store","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Coffee shop","Pastry shop","Store","Cafe","Cafe","Cafe","Cafe","Coffee shop","Coffee shop","Cafe","Cafe","Cafe","Coffee store","Coffee shop","Cafe","Cafe","Restaurant","Cafe","Cafe","Coffee shop","Cafe"],[4.6,5,5,4.4,5,4.6,4.6,4.6,4.8,4.8,4.8,4.9,4.9,4.5,4.2,4.7,4.8,4.5,4.5,4.8,4.5,4.7,4.7,4.7,4.9,4.7,4.4,4.8,4.5,4.5,4.7,4.3,4.7,4.9,4.6,5,4.4,4.1,5,5,5,4.7,4.5,5,4.7,4.7,4.6,4.9,4.9,null,4.7,4.4,4.6,4.4,4.4,4.6,4.5,4.4,4.5,4.7,4.6,5,4.9,4.6,4.8,4.8,4.7,4.7,4.5,4.5,4.5,4.2,4.6,5,4.6,4.8,4.7,4.6,4.3,4.7,4.6,5,4.5,5,4.7,5,4.9,4.9,4.8,4.9,4.7,4.6,4.6,4.9,4.9,4.6,4.8,4.7,4.9,4.7,4.6,4.7,4.4,4.6,4.8,4.6,4.3,4.5,4.6,4.8,5,4.7,4.6,4.6,4.6,5,4.5,4.9,4.9,4.5,4.5,4.4,4.5,4.4,4.7,4.6,4.7,4.4,4.7,4.6,4.8,4.6,4,4.4,4.9,4.9,4.8,4.6,5,4.9,5,4.9,5,4.7,4.6,4.9,4.9,4.6,4.9,4.6,4.7,4.6,4.9,4.8,4.7,4.8,4.7,4.6,4.9,3.9,4.5,4.6,4.7,4.7,4.5,4.6,4.6,4.6,4.7,4.3,4.7,4.7,4.6,4.6,4.8,4.6,4.5,4.6,4.7,4.7,4.9,4.1,4.5,4.6,5,null,4.6,4,4.7,3.9,4.7,4.6,4.6,5,4.6,4.3,4.6,4.7,4.3],[206,24,11,331,12,367,200,292,31,125,112,14,18,806,609,172,234,136,166,10,1596,1785,459,329,14,569,860,124,898,1195,347,12,112,17,1376,37,226,716,15,18,15,726,1345,26,485,279,241,18,46,null,587,593,103,1201,67,275,27,304,598,97,11,12,14,38,98,118,121,132,167,223,341,385,414,440,488,807,837,1482,1656,335,2700,10,122,21,1415,15,64,47,2141,36,202,113,111,40,39,789,150,80,10,17937,2931,2089,813,1517,858,702,102,778,1009,2873,24,363,1199,1284,1570,10,2236,157,321,998,1509,699,124,479,455,401,190,40,342,327,49,740,1439,947,156,116,156,38,33,1820,21,304,22,373,693,26,282,2319,26,1737,1281,1908,64,824,1633,35,514,1300,110,10,268,642,400,403,2914,40,96,1394,512,3,185,222,289,702,261,118,121,1758,551,2381,39,189,1529,38,37,null,830,170,155,9,185,2013,1051,18,963,646,16,599,341],[null,"Medium",null,"Medium",null,"Medium","Medium","Medium",null,"Medium",null,null,null,"Low","Medium","Medium","Medium","Medium","Medium",null,"Medium","Medium","Medium","Medium",null,"Medium","High","Medium","Medium","Medium","Medium",null,null,null,"Medium",null,"Medium","Medium",null,null,null,"Medium","Medium",null,"Medium","Medium","Medium",null,null,null,"Medium","Medium",null,"Medium","Medium","Medium",null,"Medium","Medium",null,null,null,null,null,null,"Medium",null,null,"Medium","Medium","Medium","Medium","Medium",null,"Medium","Medium","Medium","Medium","Medium","Medium","Medium",null,null,null,"Medium",null,null,null,"Medium",null,"Medium","Medium",null,null,null,"Medium","Medium",null,null,"Medium","Medium","Medium","Medium","Medium","Medium","Medium",null,"Medium","Medium","Medium",null,"Medium",null,"Medium","Medium",null,"Medium","Medium","Medium","Medium","Medium","Medium","Medium","Medium","Medium",null,null,null,"Medium","High",null,"Medium","Medium","Medium","Medium",null,null,null,"Medium",null,null,"Medium",null,null,"Medium",null,null,"Medium",null,"Medium","Medium","Medium",null,"Medium","Medium",null,"Medium","Low",null,null,"Medium","Medium","Medium","Medium","Medium",null,"Medium",null,"Medium",null,"Medium",null,"Medium","Medium","Medium","Medium","Medium","Medium","Medium","High",null,"Medium","Medium",null,null,null,"Medium","Medium","Medium",null,null,"Medium","Medium",null,"High","Medium","Medium","Medium",null],[true,false,null,false,null,false,false,false,null,true,null,null,false,null,null,true,true,false,true,false,true,true,false,false,false,false,null,false,false,true,true,false,false,false,false,true,false,false,true,false,null,null,true,null,false,false,false,false,false,true,true,false,false,false,false,false,false,false,true,false,true,true,false,null,null,true,true,true,null,true,false,false,false,true,false,false,false,false,true,false,true,true,false,null,true,true,null,null,null,true,false,true,true,null,false,true,false,true,true,true,null,false,false,false,null,false,null,false,false,false,true,false,false,false,true,null,false,false,false,true,false,false,false,null,false,false,false,true,false,true,false,false,true,null,null,true,false,true,null,true,true,true,true,true,false,true,false,false,null,null,false,true,true,false,null,null,false,false,true,true,true,false,false,false,false,true,true,true,false,true,true,null,false,null,false,true,false,null,false,true,true,null,true,null,false,true,null,null,false,false,true,false,true,null,null,false,false,null,null],[false,false,false,true,true,true,true,false,true,true,true,false,true,true,true,true,true,false,true,true,true,true,false,false,false,true,true,true,true,true,false,false,true,false,true,false,true,true,false,true,false,true,true,true,true,true,true,false,false,false,true,true,false,true,false,true,false,true,true,false,false,false,false,true,true,false,false,false,false,false,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,false,true,true,true,false,true,false,false,true,true,true,true,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,false,true,true,true,true,false,true,true,false,true,true,true,true,true,true,false,true,false,false,false,false,false,true,false,true,true,true,true,true,true,false,true,true,true,true,true,false,false,false,true,true,true,true,false,false,true,true,false,false,true,true,true,true,true,true,true,true,true,false,true,true,true,true,false,true,true,true,false,true,true,true,true,true,true,true,true,true],[false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,true,true,true,false,true,true,true,true,false,true,true,true,true,false,true,true,false,false,true,true,false,false,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,false,false,true,true,false,false,false,false,true,false,true,true,true,true,true,true,true,false,false,true,true,false,true,true,false,false,false,true,true,false,true,false,false,false,false,true,true,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false,true,false,true,true,true,true,true,true,false,true,false,true,true,true,false,false,false,true,true,true,true,false,false,true,true,false,false,true,true,false,true,true,true,true,true,true,false,true,true,true,false,false,true,true,true,true,false,true,true,true,true,true,true,true,false]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>region<\/th>\n      <th>place_type<\/th>\n      <th>rating<\/th>\n      <th>reviews<\/th>\n      <th>price<\/th>\n      <th>delivery_option<\/th>\n      <th>dine_in_option<\/th>\n      <th>takeout_option<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"\n    function(settings, json) {\n      $(this.api().table().header()).css({\n        'background-color': '#009879',\n        'color': '#fff'\n      });\n    }","columnDefs":[{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+<div id="price-categories-histogram" class="section level3">
+<h3>Price categories histogram</h3>
+<pre class="r"><code># Plots a histogram of the different price categories   
+
+df_clean %&gt;%
+  count(price) %&gt;%
+  ggplot(aes(price, n, fill = price)) +
+  geom_col() + 
+  ylab(&quot;Number within each price category&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Price category with missing values is big piece of the dataset.</p>
+</div>
+<div id="ratings-distribution-per-region" class="section level3">
+<h3>Ratings distribution per region</h3>
+<pre class="r"><code># This will determine ratings distribution per region and arrange orderly by avg_rating so regions showing first are those with the lowest average rating
+
+  df_clean %&gt;%
+  group_by(region) %&gt;%
+  mutate(avg_rating = mean(rating)) %&gt;%
+  ungroup() %&gt;%
+  mutate(region = fct_reorder(region, avg_rating)) %&gt;%
+  ggplot(aes(rating, fill = region)) +
+  geom_histogram() + 
+  facet_wrap(~region) + 
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Rating appears to be influenced by region but not a main factor. However, variability shown by the disparity in range shows that there are potential other features that influence market segmentation. The boxplot below shows this more clearly.</p>
+</div>
+<div id="average-rating-per-region" class="section level3">
+<h3>Average rating per region</h3>
+<pre class="r"><code># Below code will produce a box plot
+
+  df_clean %&gt;%
+  ggplot(aes(rating, reorder(region, rating, na.rm = TRUE))) +
+  geom_boxplot() + 
+  ylab(&quot;region&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="average-rating-by-price-category" class="section level3">
+<h3>Average rating by price category</h3>
+<pre class="r"><code># Construct our plot using ggplot
+
+  df_clean %&gt;%
+  group_by(price) %&gt;%
+  summarise(avg_rating = mean(rating, na.rm = TRUE)) %&gt;%
+  ggplot(aes(price, avg_rating, fill = price)) +
+  geom_col() + 
+   ylab(&quot;Average rating&quot;) + 
+   xlab(&quot;Price category&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Clearly, there is no significant difference in rating between the different price categories. NA category (i.e. missing) is slightly higher but not significantly.</p>
+</div>
+<div id="average-review-by-price-category" class="section level3">
+<h3>Average review by price category</h3>
+<pre class="r"><code># Construct our plot using ggplot
+
+  df_clean %&gt;%
+  group_by(price) %&gt;%
+  summarise(avg_reviews = mean(reviews, na.rm = TRUE)) %&gt;%
+  ggplot(aes(price, avg_reviews, fill = price)) +
+  geom_col()</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>This reflects that there is a much bigger segment of people who visit medium priced restaurants.</p>
+</div>
+<div id="total-reviews-by-price-category" class="section level3">
+<h3>Total reviews by price category</h3>
+<pre class="r"><code># Construct using ggplot 
+
+  df_clean %&gt;%
+  group_by(price) %&gt;%
+  summarise(total_reviews = sum(reviews, na.rm = TRUE)) %&gt;%
+  ggplot(aes(price, total_reviews, fill = price)) +
+  geom_col() + 
+  xlab(&quot;Price category&quot;) + 
+  ylab(&quot;Total reviews&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Now I comfortable that there is no clear imputation of missing price categories so will remove from the dataset.</p>
+</div>
+<div id="total-reviews-by-region" class="section level3">
+<h3>Total reviews by region</h3>
+<pre class="r"><code># Visualise total reviews by region to help us better understand the dataset 
+
+region_reviews &lt;-  df_clean %&gt;%
+  group_by(region) %&gt;%
+  summarise(total_reviews = sum(reviews, na.rm = TRUE),
+            avg_rating = mean(rating, na.rm = TRUE))
+
+  df_clean %&gt;%
+  group_by(region) %&gt;%
+  summarise(total_reviews = sum(reviews, na.rm = TRUE)) %&gt;%
+  mutate(region = fct_reorder(region, total_reviews)) %&gt;%
+  ggplot(aes(region, total_reviews, fill = region)) +
+  geom_col() + 
+  coord_flip() + 
+  xlab(&quot;Region&quot;) + 
+  ylab(&quot;Total reviews&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="leaflet-map" class="section level3">
+<h3>Leaflet map</h3>
+<pre class="r"><code># Below code leverages the leaflet library. To set regions as markers in our map, I have sought the longitudes and latitudes from the Geodatos website as provided in the reference below.
+
+library(leaflet)
+
+sf &lt;- data.frame(lng = c(35.04066, 36.25272, 36.25272, 33.39404, 30.5238, 24.02324, 37.5413, 30.74383, 34.55367, 35.11714),
+                 lat = c(48.46664, 49.98081, 46.63695, 47.90572, 50.45466, 49.83826, 47.09514, 46.48572, 49.58925, 47.85167),
+                 total_reviews = region_reviews$total_reviews,
+                 popup = region_reviews$region,
+                 region = region_reviews$region,
+                 rating = region_reviews$avg_rating,
+                 stringsAsFactors = FALSE)
+
+# Below will add colors to the different regions and contrast will be higher by regions that have higher overall total reviews.
+
+sf &lt;- sf %&gt;% 
+  mutate(region = fct_reorder(region, total_reviews))
+
+pal &lt;- colorFactor(
+  palette = &quot;YlOrRd&quot;,
+  domain = sf$region
+)
+
+# This is the final code to construct the map using the lng, lat.
+
+leaflet(sf) %&gt;%
+  addTiles() %&gt;%
+  addCircleMarkers(lng = ~lng, 
+                   lat = ~lat,
+                   weight = 20,
+                   radius = ~ log(sf$total_reviews),
+                   color = ~ pal(region),
+                   label = paste(&quot; Region = &quot;, sf$region, &quot;,&quot;,
+                                 &quot;Total Reviews = &quot;,sf$total_reviews,&quot;,&quot;,
+                                 &quot;Average Rating = &quot;, round(sf$rating,1))) %&gt;%
+    addLegend(position = &quot;bottomleft&quot;, pal = pal, values = ~region)</code></pre>
+<div id="htmlwidget-078955265badd3d29569" style="width:768px;height:768px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-078955265badd3d29569">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[48.46664,49.98081,46.63695,47.90572,50.45466,49.83826,47.09514,46.48572,49.58925,47.85167],[35.04066,36.25272,36.25272,33.39404,30.5238,24.02324,37.5413,30.74383,34.55367,35.11714],[9.32447230602109,9.29550838434606,8.85836863630802,9.13108069099055,9.6350850948163,10.5654794070884,8.26255897301066,9.04073758759,9.27846620102378,8.95982562386584],null,null,{"interactive":true,"className":"","stroke":true,"color":["#DA151F","#F44025","#FFEFA5","#FE9E43","#B60026","#800026","#FFFFCC","#FFBF5A","#FD7434","#FEDD7F"],"weight":20,"opacity":0.5,"fill":true,"fillColor":["#DA151F","#F44025","#FFEFA5","#FE9E43","#B60026","#800026","#FFFFCC","#FFBF5A","#FD7434","#FEDD7F"],"fillOpacity":0.2},null,null,null,null,[" Region =  Dnipro , Total Reviews =  11209 , Average Rating =  4.5"," Region =  Kharkiv , Total Reviews =  10889 , Average Rating =  4.6"," Region =  Kherson , Total Reviews =  7033 , Average Rating =  4.6"," Region =  Khrivoy Rog , Total Reviews =  9238 , Average Rating =  4.6"," Region =  Kiev , Total Reviews =  15292 , Average Rating =  4.8"," Region =  Lviv , Total Reviews =  38773 , Average Rating =  4.7"," Region =  Mariupol , Total Reviews =  3876 , Average Rating =  4.7"," Region =  Odessa , Total Reviews =  8440 , Average Rating =  4.8"," Region =  Poltava , Total Reviews =  10705 , Average Rating =  4.7"," Region =  Zaporozhye , Total Reviews =  7784 , Average Rating =  4.7"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FFFFCC","#FFEFA5","#FEDD7F","#FFBF5A","#FE9E43","#FD7434","#F44025","#DA151F","#B60026","#800026"],"labels":["Mariupol","Kherson","Zaporozhye","Odessa","Khrivoy Rog","Poltava","Kharkiv","Dnipro","Kiev","Lviv"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomleft","type":"factor","title":"region","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[46.48572,50.45466],"lng":[24.02324,37.5413]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="total-reviews-by-place-type" class="section level3">
+<h3>Total reviews by place type</h3>
+<pre class="r"><code>  df_clean %&gt;%
+  group_by(place_type) %&gt;%
+  summarise(total_reviews = sum(reviews, na.rm = TRUE)) %&gt;%
+  mutate(place_type = fct_reorder(place_type, total_reviews)) %&gt;%
+  ggplot(aes(place_type, total_reviews, fill = place_type)) +
+  geom_col() + 
+  coord_flip()</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Most total reviews come from either coffee shop, cafe and espresso bar.</p>
+<p>As Kraydieh insightfully answered on Quora when addressed a question on differences between an espresso bar and co”it’s a bit bigger than a kiosk, it has a bar, stools underneath, but it is much smaller than an a regular shop.”</p>
+</div>
+<div id="final-data-cleaning-touches-before-modeling" class="section level3">
+<h3>Final data cleaning touches before modeling</h3>
+<pre class="r"><code>df_clean_place &lt;-df_clean %&gt;%
+                  mutate(place_type = str_to_lower(place_type),
+                         place_type = case_when(str_detect(place_type,&quot;store&quot;) ~ &quot;coffee store&quot;,
+                                                str_detect(place_type,&quot;coffee shop&quot;) ~ &quot;coffee shop&quot;,
+                                                str_detect(place_type,&quot;espresso bar&quot;) ~ &quot;espresso bar&quot;,
+                                                str_detect(place_type,&quot;cafe&quot;) ~ &quot;cafe&quot;,
+                                                TRUE ~ &quot;other&quot;))
+
+df_parsed &lt;- df_clean_place %&gt;%
+              mutate(delivery_option = as.integer(delivery_option),
+                     dine_in_option = as.integer(dine_in_option),
+                     takeout_option = as.integer(takeout_option)) %&gt;%
+              drop_na(price, delivery_option) %&gt;%
+              pivot_wider(names_from = price, values_from = rating, values_fill = 0)
+
+library(DT)
+
+datatable(df_parsed, options = list(
+  initComplete = JS(&quot;
+    function(settings, json) {
+      $(this.api().table().header()).css({
+        &#39;background-color&#39;: &#39;#009879&#39;,
+        &#39;color&#39;: &#39;#fff&#39;
+      });
+    }&quot;)
+))</code></pre>
+<div id="htmlwidget-818b6f2e7a70eba42242" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-818b6f2e7a70eba42242">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101"],["Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Mariupol","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Poltava","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Kherson","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Zaporozhye","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Odessa","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Lviv","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Khrivoy Rog","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kiev","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Kharkiv","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro","Dnipro"],["cafe","coffee shop","espresso bar","coffee shop","coffee shop","coffee shop","cafe","cafe","coffee shop","cafe","coffee shop","coffee shop","coffee shop","cafe","cafe","espresso bar","coffee shop","cafe","coffee store","other","cafe","coffee shop","other","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","cafe","espresso bar","espresso bar","coffee shop","cafe","coffee shop","coffee shop","cafe","coffee shop","espresso bar","cafe","coffee shop","coffee shop","espresso bar","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","cafe","cafe","cafe","coffee shop","cafe","cafe","coffee shop","cafe","coffee shop","cafe","cafe","cafe","cafe","coffee shop","espresso bar","coffee shop","cafe","espresso bar","espresso bar","coffee shop","espresso bar","espresso bar","coffee shop","coffee shop","coffee shop","coffee shop","cafe","coffee shop","espresso bar","coffee shop","coffee shop","coffee shop","coffee shop","coffee shop","other","cafe","cafe","coffee shop","cafe","cafe","cafe"],[24,331,367,200,292,125,172,234,136,166,1596,1785,459,329,569,124,898,1195,347,1376,226,716,1345,485,279,241,587,593,1201,67,275,304,598,118,223,341,385,414,488,807,837,1482,1656,335,2700,1415,202,113,789,150,17937,2089,813,1517,702,778,1009,2873,363,1284,1570,2236,157,321,998,1509,699,124,455,342,327,740,1439,304,693,2319,1281,1908,824,514,1300,268,642,400,403,2914,96,512,185,289,261,118,121,551,2381,1529,155,2013,1051,646,16],[0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,1,1,0,0,1,0,0],[0,1,1,1,0,1,1,1,0,1,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1],[5,4.4,4.6,4.6,4.6,4.8,4.7,4.8,4.5,4.5,4.5,4.7,4.7,4.7,4.7,4.8,4.5,4.5,4.7,4.6,4.4,4.1,4.5,4.7,4.7,4.6,4.7,4.4,4.4,4.4,4.6,4.4,4.5,4.8,4.5,4.5,4.2,4.6,4.6,4.8,4.7,4.6,4.3,4.7,4.6,4.7,4.7,4.6,4.6,4.8,4.7,4.7,4.4,4.6,4.6,4.5,4.6,4.8,4.7,4.6,4.6,4.5,4.9,4.9,4.5,4.5,4.4,4.5,4.7,4.7,0,4.6,4,4.9,4.6,4.6,4.7,4.6,4.8,4.7,0,4.5,4.6,4.7,4.7,4.5,4.6,4.7,4.7,4.6,4.8,4.6,4.5,4.7,0,4.5,4.7,4.6,4.6,4.3,4.6],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4.7,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>region<\/th>\n      <th>place_type<\/th>\n      <th>reviews<\/th>\n      <th>delivery_option<\/th>\n      <th>dine_in_option<\/th>\n      <th>takeout_option<\/th>\n      <th>Medium<\/th>\n      <th>High<\/th>\n      <th>Low<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"\n    function(settings, json) {\n      $(this.api().table().header()).css({\n        'background-color': '#009879',\n        'color': '#fff'\n      });\n    }","columnDefs":[{"className":"dt-right","targets":[3,4,5,6,7,8,9]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="modeling-using-principal-component-analysis" class="section level2">
+<h2>Modeling using Principal Component Analysis</h2>
+<pre class="r"><code># Load the tidy models library
+
+library(tidymodels)
+
+# Use reviews to set the recipe or formula.
+# PCA will not use region and place_type
+# Use log reviews due to the high number of reviews
+
+pca_rec &lt;- recipe(reviews ~ ., data = df_parsed) %&gt;%
+            update_role(region, place_type, new_role = &quot;id&quot;) %&gt;%
+            step_log(reviews) %&gt;%
+            step_normalize(all_predictors()) %&gt;%
+            step_pca(all_predictors())
+
+pca_prep &lt;- prep(pca_rec)
+
+pca_prep</code></pre>
+<pre><code>## Recipe
+## 
+## Inputs:
+## 
+##       role #variables
+##         id          2
+##    outcome          1
+##  predictor          6
+## 
+## Training data contained 101 data points and no missing data.
+## 
+## Operations:
+## 
+## Log transformation on reviews [trained]
+## Centering and scaling for delivery_option, dine_in_option, ... [trained]
+## PCA extraction with delivery_option, dine_in_option, t... [trained]</code></pre>
+<p>Below shows that we have 2 ids, 1 outcome which is what we are interested in (reviews) to understand market share segments, and 6 predictors.</p>
+<pre class="r"><code># Code below will tidy our data by showing contributing values by the computed features and classifies these into different components
+
+tidied_pca &lt;- tidy(pca_prep, 3)
+
+# Now will plot the PCA terms (features) by each of the six components
+
+tidied_pca %&gt;%
+  mutate(component = fct_inorder(component)) %&gt;%
+  ggplot(aes(value, terms, fill = terms)) + 
+  geom_col(show.legend = FALSE) + 
+  facet_wrap(~component) + 
+  labs(y = NULL)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># There are many features so eliminate irrelevant ones by showing the top 6 for each PCA component 
+
+# Will also load the tidytext library to reorder within to produce a prettier chart
+
+library(tidytext)
+
+tidied_pca %&gt;%
+   filter(component %in% c(&quot;PC1&quot;, &quot;PC2&quot;, &quot;PC3&quot;, &quot;PC4&quot;)) %&gt;%
+   group_by(component) %&gt;%
+   top_n(6, abs(value)) %&gt;%
+   mutate(terms = reorder_within(terms, abs(value), component)) %&gt;%
+   ggplot(aes(abs(value), terms, fill = value &gt; 0)) + 
+   geom_col() + 
+   facet_wrap(~component, scales = &quot;free_y&quot;) +
+   scale_y_reordered() +
+   labs(x = &quot;Absolute value of contribution&quot;, y = NULL, fill = &quot;Positive?&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="main-takeaways-from-the-above-results" class="section level4">
+<h4>Main takeaways from the above results</h4>
+<ul>
+<li><p>The first principal component tells whether the price is medium or not (average cafe or not)</p></li>
+<li><p>The second PC tells us whether the coffee shop entertains either takeouts or deliveries.</p></li>
+<li><p>The third PC is whether the coffee shop is marketed as a niche as either low or high-end</p></li>
+<li><p>The fourth PC is whether the coffee shop does dine-in or delivery</p></li>
+</ul>
+</div>
+</div>
+<div id="significance-testing" class="section level2">
+<h2>Significance testing</h2>
+<pre class="r"><code># Finally, we will perform a linear model to test the most significant component
+# Note we don&#39;t need to re-do a log of reviews as it is already built-in the PCA structure.
+
+pca_lm &lt;- juice(pca_prep) %&gt;%
+    select(-region, -place_type) %&gt;%
+    lm(reviews ~ ., data = .)
+
+summary(pca_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = reviews ~ ., data = .)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.5082 -0.5122  0.0917  0.4641  3.1855 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  6.22967    0.09571  65.088  &lt; 2e-16 ***
+## PC1          0.13960    0.06771   2.062    0.042 *  
+## PC2         -0.09463    0.07203  -1.314    0.192    
+## PC3         -0.10876    0.09367  -1.161    0.249    
+## PC4          0.53395    0.11250   4.746 7.31e-06 ***
+## PC5          0.21504    0.15320   1.404    0.164    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.9619 on 95 degrees of freedom
+## Multiple R-squared:  0.2509, Adjusted R-squared:  0.2115 
+## F-statistic: 6.364 on 5 and 95 DF,  p-value: 3.867e-05</code></pre>
+</div>
+<div id="key-findings" class="section level2">
+<h2>Key Findings</h2>
+<p>From the above we can tell there is a significant evidence that PC4 and PC1 are contributing factors to the overall number of reviews given.</p>
+<p>Explaining this further, we could infer <strong>4 main market segments</strong> and these are :</p>
+<ul>
+<li>Medium price category</li>
+<li>High/Low price category (niche market price)</li>
+<li>Diners or “Dine-ins”</li>
+<li>Delivery stores</li>
+</ul>
+<p><strong>However, it would be interesting to test the significance of this assertion had we had data on the total number of visits.</strong></p>
+<div id="references" class="section level3">
+<h3>References</h3>
+<ul>
+<li><p><a href="https://www.quora.com/What-is-the-difference-between-a-cafe-coffee-shop-espresso-bar-and-other-establishments-that-specializes-in-serving-coffee-based-drinks" class="uri">https://www.quora.com/What-is-the-difference-between-a-cafe-coffee-shop-espresso-bar-and-other-establishments-that-specializes-in-serving-coffee-based-drinks</a></p></li>
+<li><p><a href="https://www.geodatos.net/en/coordinates/ukraine" class="uri">https://www.geodatos.net/en/coordinates/ukraine</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
